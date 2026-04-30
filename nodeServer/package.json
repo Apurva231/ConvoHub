@@ -9,6 +9,7 @@
   "author": "Apurva",
   "license": "ISC",
   "dependencies": {
+    "express": "^5.2.1",
     "nodemon": "^3.1.9",
     "socket.io": "^4.8.1"
   }

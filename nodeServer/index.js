@@ -1,4 +1,13 @@
-const io = require('socket.io')(8000)
+const express = require('express');
+const app = express();
+const http = require('http').createServer(app);
+const io = require('socket.io')(http, {
+    cors: { origin: "*" }
+});
+
+app.use(express.static('../')); // serves index.html, css/, js/, etc.
+
+http.listen(process.env.PORT || 8000);
 
 const users = {};
 
